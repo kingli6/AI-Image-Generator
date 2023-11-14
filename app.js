@@ -4,7 +4,7 @@ const API_KEY = 'xyz';
 const submitIcon = document.querySelector('#submit-icon');
 const inputElement = document.querySelector('input');
 
-const getImages = () => {
+const getImages = async () => {
   const options = {
     method: 'POST',
     headers: {
@@ -18,7 +18,12 @@ const getImages = () => {
     }),
   };
   try {
-    fetch('https://api.openai.com/v1/images/generations', options);
+    const response = await fetch(
+      'https://api.openai.com/v1/images/generations',
+      options
+    );
+    const data = await response.json();
+    console.log(data);
   } catch (error) {
     console.error(error);
   }
