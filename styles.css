@@ -56,3 +56,24 @@ input {
   right: 30px;
   cursor: pointer;
 }
+
+.images-section {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.image-container {
+  /* width 40% of the parent container */
+  width: 48%;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: rgb(38, 57, 77) 0 20px 30px -10px;
+}
+
+.image-container img {
+  width: 100%;
+}

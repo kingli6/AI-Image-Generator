@@ -26,17 +26,21 @@ const getImages = async () => {
       'https://api.openai.com/v1/images/generations',
       options
     );
+
     const data = await response.json();
     // console.log(data);
 
     // If data exsists -data?
     data?.data.forEach((imageObject) => {
+      // creating div element for each object
       const ImageContainer = document.createElement('div');
-      ImageContainer.classList.add('image-container');
+      imageContainer.classList.add('image-container'); //adding class
+
+      // adding a img element inside the div
       const imageElement = document.createElement('img');
       imageElement.setAttribute('src', imageObject.url);
-      ImageContainer.append(imageElement);
-      imageSection.append(ImageContainer);
+      imageContainer.append(imageElement); // putting in the img element in the div
+      imageSection.append(imageContainer); // putting the div in the section with class images-section OBS -look at line 6: const imageSection = document.querySelector('.images-section');
     });
   } catch (error) {
     console.error(error);
