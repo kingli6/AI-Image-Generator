@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #2372c6;
+  /* #c62368 */
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Trebuchet MS', sans-serif;
+}
+header {
+  color: rgb(255, 255, 255);
+  height: 150px;
+  display: flex;
+  align-items: center;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+}
