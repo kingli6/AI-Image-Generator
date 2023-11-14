@@ -16,11 +16,42 @@ header {
   height: 150px;
   display: flex;
   align-items: center;
+  width: 100%;
+  justify-content: center;
 }
+/* this is not a class, so dot is not needed */
 
 svg {
   position: absolute;
   top: 0;
   left: 0;
   z-index: -10;
+}
+
+.bottom-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 150px;
+}
+
+.input-container {
+  width: 100%;
+  max-width: 650px;
+  position: relative;
+  /*??? position relative so that the submit icon can be placce inside */
+}
+input {
+  width: 100%;
+  border: none;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: rgb(38, 57, 77) 0 20px 30px -10px;
+  box-sizing: border-box;
+}
+#submit-icon {
+  position: absolute;
+  top: 10px;
+  right: 30px;
 }
